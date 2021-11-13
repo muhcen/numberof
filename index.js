@@ -1,6 +1,11 @@
-function numberof(str, val) {
-  str = String(str);
-  val = String(val);
+function numberof(str, val, options = {}) {
+  if (options.insensitive) {
+    str = String(str).toLowerCase();
+    val = String(val).toLowerCase();
+  } else {
+    str = String(str);
+    val = String(val);
+  }
   if (val === "") {
     return 0;
   } else {

@@ -19,7 +19,10 @@ numberof('word','o') => 1
 
 numberof('javascript is not java','ja') => 2
 
-numberof('water wather whater water whter water water') => 4
+numberof('water wather whater water whter water Water' 'water') => 3
+
+numberof('water wather whater water whter water Water' , 'water',{ insensitive:true }) => 4
+
 ```
 
 ## Contributing
